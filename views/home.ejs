@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="/dist/vendors/bootstrap/css/bootstrap.min.css"
+    />
+    <title>Bienvenue</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <% if (name) { %>
+          <h1>Wesh, <%= name %> !</h1>
+          <p>Bien ou bien ?</p>
+          <form action="/logout?_method=DELETE" method="POST">
+            <button type="submit">Se déconnecter</button>
+          </form>
+          <% } else { %>
+          <h1>On se connait ?</h1>
+          <ul>
+            <li><a href="/register">S'inscrire</a></li>
+            <li><a href="/login">Se connecter</a></li>
+          </ul>
+          <% } %>
+        </div>
+      </div>
+    </div>
+    <script src="/dist/vendors/jquery/jquery.slim.min.js"></script>
+    <script src="/dist/vendors/popper/popper.min.js"></script>
+    <script src="/dist/vendors/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

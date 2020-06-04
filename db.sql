@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS user(
+  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `email` text
+)
